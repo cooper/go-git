@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/plumbing/storer"
 
 	. "gopkg.in/check.v1"
 )

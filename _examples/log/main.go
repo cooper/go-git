@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"gopkg.in/src-d/go-git.v4"
-	. "gopkg.in/src-d/go-git.v4/_examples"
-	"gopkg.in/src-d/go-git.v4/plumbing/object"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/cooper/go-git"
+	. "github.com/cooper/go-git/_examples"
+	"github.com/cooper/go-git/plumbing/object"
+	"github.com/cooper/go-git/storage/memory"
 )
 
 // Example of how to:

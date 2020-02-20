@@ -5,10 +5,10 @@ import (
 	"sort"
 	"strings"
 
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/protocol/packp/capability"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	"gopkg.in/src-d/go-git.v4/storage/memory"
+	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/plumbing/protocol/packp/capability"
+	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/storage/memory"
 )
 
 // AdvRefs values represent the information transmitted on an

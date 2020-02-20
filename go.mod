@@ -1,4 +1,4 @@
-module gopkg.in/src-d/go-git.v4
+module github.com/cooper/go-git
 
 require (
 	github.com/alcortesm/tgz v0.0.0-20161220082320-9c5fe88206d7 // indirect
@@ -27,3 +27,5 @@ require (
 	gopkg.in/src-d/go-git-fixtures.v3 v3.5.0
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
+
+go 1.13
