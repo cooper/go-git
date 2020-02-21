@@ -73,15 +73,17 @@ func NewStorageWithOptions(fs billy.Filesystem, cache cache.Object, ops Options)
 	}
 }
 
-// Filesystem returns the underlying filesystem
+// Filesystem returns the underlying filesystem for the main
+// working-tree/common git directory
 func (s *Storage) Filesystem() billy.Filesystem {
-	return s.fs
+	return s.commonfs
 }
 
-// MainFilesystem returns the underlying filesystem for the main
-// working-tree/common git directory
-func (s *Storage) MainFilesystem() billy.Filesystem {
-	return s.commonfs
+// LocalFilesystem returns the underlying filesystem for local
+// repository. If it is not a linked repository, this is the same
+// as Filesystem.
+func (s *Storage) LocalFilesystem() billy.Filesystem {
+	return s.fs
 }
 
 // Init initializes .git directory
