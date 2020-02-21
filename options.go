@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/crypto/openpgp"
 	"github.com/cooper/go-git/v4/config"
 	"github.com/cooper/go-git/v4/plumbing"
 	"github.com/cooper/go-git/v4/plumbing/object"
 	"github.com/cooper/go-git/v4/plumbing/protocol/packp/sideband"
 	"github.com/cooper/go-git/v4/plumbing/transport"
+	"golang.org/x/crypto/openpgp"
 )
 
 // SubmoduleRescursivity defines how depth will affect any submodule recursive
@@ -499,3 +499,7 @@ type PlainOpenOptions struct {
 
 // Validate validates the fields and sets the default values.
 func (o *PlainOpenOptions) Validate() error { return nil }
+
+// AddWorktreeOptions describes how an AddWorktree should be performed.
+type AddWorktreeOptions struct {
+}

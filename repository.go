@@ -13,7 +13,6 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/crypto/openpgp"
 	"github.com/cooper/go-git/v4/config"
 	"github.com/cooper/go-git/v4/internal/revision"
 	"github.com/cooper/go-git/v4/plumbing"
@@ -24,6 +23,7 @@ import (
 	"github.com/cooper/go-git/v4/storage"
 	"github.com/cooper/go-git/v4/storage/filesystem"
 	"github.com/cooper/go-git/v4/utils/ioutil"
+	"golang.org/x/crypto/openpgp"
 
 	"gopkg.in/src-d/go-billy.v4"
 	"gopkg.in/src-d/go-billy.v4/osfs"
@@ -1590,4 +1590,45 @@ func (r *Repository) createNewObjectPack(cfg *RepackConfig) (h plumbing.Hash, er
 	}
 
 	return h, err
+}
+
+// PlainAddWorktree blah
+func (r *Repository) PlainAddWorktree(branch, path string, o *AddWorktreeOptions) (*Repository, error) {
+	return r.AddWorktree(branch, osfs.New(path), o)
+}
+
+// AddWorktree blah
+func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *AddWorktreeOptions) (*Repository, error) {
+	var fs billy.Filesystem
+	type fsBased interface {
+		Filesystem() billy.Filesystem
+	}
+
+	// only allow filesystem based storer
+	if fstorer, ok := r.Storer.(fsBased); ok {
+		fs = fstorer.Filesystem()
+	} else {
+		return nil, errors.New("storer is not file based")
+	}
+
+	// create .git/worktrees/<branch>
+	if err := fs.MkdirAll(fs.Join("worktrees", branch), os.ModeDir|os.ModePerm); err != nil {
+		return nil, err
+	}
+
+	// todo: if lock, create locked file
+	if false {
+		f, err := fs.Create(fs.Join("worktrees", branch, "lock"))
+		if err != nil {
+			return nil, err
+		}
+		defer f.Close()
+	}
+
+	// create .git file directing to main repo in the linked repo worktree
+	if err := createDotGitFile(worktree, fs); err != nil {
+		return nil, err
+	}
+
+	return nil, nil
 }
