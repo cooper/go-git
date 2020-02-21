@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/filemode"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/filemode"
 )
 
 var (

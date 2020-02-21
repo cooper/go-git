@@ -3,13 +3,13 @@ package server_test
 import (
 	"testing"
 
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/plumbing/transport/client"
-	"github.com/cooper/go-git/plumbing/transport/server"
-	"github.com/cooper/go-git/plumbing/transport/test"
-	"github.com/cooper/go-git/storage/filesystem"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport/client"
+	"github.com/cooper/go-git/v4/plumbing/transport/server"
+	"github.com/cooper/go-git/v4/plumbing/transport/test"
+	"github.com/cooper/go-git/v4/storage/filesystem"
+	"github.com/cooper/go-git/v4/storage/memory"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-git-fixtures.v3"

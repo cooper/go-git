@@ -9,16 +9,16 @@ import (
 	"path/filepath"
 
 	"gopkg.in/src-d/go-billy.v4/util"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/filemode"
-	"github.com/cooper/go-git/plumbing/format/gitignore"
-	"github.com/cooper/go-git/plumbing/format/index"
-	"github.com/cooper/go-git/plumbing/object"
-	"github.com/cooper/go-git/utils/ioutil"
-	"github.com/cooper/go-git/utils/merkletrie"
-	"github.com/cooper/go-git/utils/merkletrie/filesystem"
-	mindex "github.com/cooper/go-git/utils/merkletrie/index"
-	"github.com/cooper/go-git/utils/merkletrie/noder"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/filemode"
+	"github.com/cooper/go-git/v4/plumbing/format/gitignore"
+	"github.com/cooper/go-git/v4/plumbing/format/index"
+	"github.com/cooper/go-git/v4/plumbing/object"
+	"github.com/cooper/go-git/v4/utils/ioutil"
+	"github.com/cooper/go-git/v4/utils/merkletrie"
+	"github.com/cooper/go-git/v4/utils/merkletrie/filesystem"
+	mindex "github.com/cooper/go-git/v4/utils/merkletrie/index"
+	"github.com/cooper/go-git/v4/utils/merkletrie/noder"
 )
 
 var (

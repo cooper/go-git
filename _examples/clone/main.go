@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
 )
 
 // Basic example of how to clone a repository using clone options.

@@ -4,8 +4,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/cooper/go-git/plumbing/format/index"
-	"github.com/cooper/go-git/utils/merkletrie/noder"
+	"github.com/cooper/go-git/v4/plumbing/format/index"
+	"github.com/cooper/go-git/v4/utils/merkletrie/noder"
 )
 
 // The node represents a index.Entry or a directory inferred from the path

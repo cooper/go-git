@@ -4,8 +4,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/plumbing/transport/test"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport/test"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-git-fixtures.v3"

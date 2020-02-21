@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"gopkg.in/src-d/go-billy.v4"
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4/osfs"

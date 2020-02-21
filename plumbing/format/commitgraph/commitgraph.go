@@ -3,7 +3,7 @@ package commitgraph
 import (
 	"time"
 
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 // CommitData is a reduced representation of Commit as presented in the commit graph

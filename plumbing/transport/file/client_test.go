@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cooper/go-git/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport"
 
 	. "gopkg.in/check.v1"
 )

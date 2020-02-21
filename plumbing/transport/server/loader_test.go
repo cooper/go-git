@@ -4,8 +4,8 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/storage/memory"
 
 	. "gopkg.in/check.v1"
 )

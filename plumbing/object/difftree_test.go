@@ -3,14 +3,14 @@ package object
 import (
 	"sort"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/filemode"
-	"github.com/cooper/go-git/plumbing/format/packfile"
-	"github.com/cooper/go-git/plumbing/storer"
-	"github.com/cooper/go-git/storage/filesystem"
-	"github.com/cooper/go-git/storage/memory"
-	"github.com/cooper/go-git/utils/merkletrie"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/filemode"
+	"github.com/cooper/go-git/v4/plumbing/format/packfile"
+	"github.com/cooper/go-git/v4/plumbing/storer"
+	"github.com/cooper/go-git/v4/storage/filesystem"
+	"github.com/cooper/go-git/v4/storage/memory"
+	"github.com/cooper/go-git/v4/utils/merkletrie"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-git-fixtures.v3"

@@ -6,9 +6,9 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 var (

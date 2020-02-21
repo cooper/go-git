@@ -15,7 +15,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cooper/go-git/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-git-fixtures.v3"

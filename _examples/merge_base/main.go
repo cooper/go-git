@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/cooper/go-git"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/object"
+	"github.com/cooper/go-git/v4"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/object"
 )
 
 type exitCode int

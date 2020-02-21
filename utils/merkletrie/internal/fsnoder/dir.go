@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cooper/go-git/utils/merkletrie/noder"
+	"github.com/cooper/go-git/v4/utils/merkletrie/noder"
 )
 
 // Dir values implement directory-like noders.

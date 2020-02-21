@@ -4,9 +4,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/object"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/object"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 // objectCommitNode is a representation of Commit as presented in the GIT object format.

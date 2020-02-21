@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/storer"
-	"github.com/cooper/go-git/storage/test"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/storer"
+	"github.com/cooper/go-git/v4/storage/test"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4/memfs"

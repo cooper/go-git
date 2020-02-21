@@ -9,9 +9,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/object"
-	"github.com/cooper/go-git/utils/diff"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/object"
+	"github.com/cooper/go-git/v4/utils/diff"
 )
 
 // BlameResult represents the result of a Blame operation.

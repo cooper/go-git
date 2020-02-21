@@ -4,9 +4,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/object"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/object"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 // CommitNode is generic interface encapsulating a lightweight commit object retrieved

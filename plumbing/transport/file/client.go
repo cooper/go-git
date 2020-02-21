@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/plumbing/transport/internal/common"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport/internal/common"
 )
 
 // DefaultClient is the default local client.

@@ -1,8 +1,8 @@
 package transactional
 
 import (
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 // ShallowStorage implements the storer.ShallowStorer for the transactional package.

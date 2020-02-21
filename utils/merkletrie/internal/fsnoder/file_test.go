@@ -3,7 +3,7 @@ package fsnoder
 import (
 	"testing"
 
-	"github.com/cooper/go-git/utils/merkletrie/noder"
+	"github.com/cooper/go-git/v4/utils/merkletrie/noder"
 
 	. "gopkg.in/check.v1"
 )

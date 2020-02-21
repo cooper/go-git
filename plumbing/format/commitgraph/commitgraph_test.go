@@ -8,8 +8,8 @@ import (
 
 	. "gopkg.in/check.v1"
 	fixtures "gopkg.in/src-d/go-git-fixtures.v3"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/format/commitgraph"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/format/commitgraph"
 )
 
 func Test(t *testing.T) { TestingT(t) }

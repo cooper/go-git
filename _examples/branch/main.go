@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 // An example of how to create and remove branches or any other kind of reference.

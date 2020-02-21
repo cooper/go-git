@@ -5,10 +5,10 @@ import (
 	"io"
 	"strings"
 
-	"github.com/cooper/go-git/plumbing/filemode"
-	"github.com/cooper/go-git/plumbing/storer"
-	"github.com/cooper/go-git/utils/binary"
-	"github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing/filemode"
+	"github.com/cooper/go-git/v4/plumbing/storer"
+	"github.com/cooper/go-git/v4/utils/binary"
+	"github.com/cooper/go-git/v4/utils/ioutil"
 )
 
 // File represents git file objects.

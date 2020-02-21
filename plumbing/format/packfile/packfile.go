@@ -6,10 +6,10 @@ import (
 	"os"
 
 	billy "gopkg.in/src-d/go-billy.v4"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/format/idxfile"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/format/idxfile"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 var (

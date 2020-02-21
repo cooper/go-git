@@ -10,14 +10,14 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/format/packfile"
-	"github.com/cooper/go-git/plumbing/protocol/packp"
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/format/packfile"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/storage/memory"
 
 	. "gopkg.in/check.v1"
-	"github.com/cooper/go-git/plumbing/protocol/packp/capability"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/capability"
 )
 
 type UploadPackSuite struct {

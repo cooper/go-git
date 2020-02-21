@@ -9,7 +9,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/cooper/go-git/utils/binary"
+	"github.com/cooper/go-git/v4/utils/binary"
 )
 
 var (

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"io"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/protocol/packp/capability"
-	"github.com/cooper/go-git/plumbing/protocol/packp/sideband"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/capability"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/sideband"
 )
 
 var (

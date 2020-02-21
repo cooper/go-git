@@ -11,9 +11,9 @@ import (
 	stdioutil "io/ioutil"
 	"sync"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/utils/binary"
-	"github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/utils/binary"
+	"github.com/cooper/go-git/v4/utils/ioutil"
 )
 
 var (

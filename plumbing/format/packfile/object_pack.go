@@ -1,7 +1,7 @@
 package packfile
 
 import (
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 // ObjectToPack is a representation of an object that is going to be into a

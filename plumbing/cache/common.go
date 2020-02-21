@@ -1,6 +1,6 @@
 package cache
 
-import "github.com/cooper/go-git/plumbing"
+import "github.com/cooper/go-git/v4/plumbing"
 
 const (
 	Byte FileSize = 1 << (iota * 10)

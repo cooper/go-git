@@ -3,12 +3,12 @@ package git
 import (
 	"testing"
 
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/format/packfile"
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/storage/filesystem"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/format/packfile"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/storage/filesystem"
+	"github.com/cooper/go-git/v4/storage/memory"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4"

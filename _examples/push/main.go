@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
 )
 
 // Example of how to open a repository in a specific path, and push to

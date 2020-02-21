@@ -1,9 +1,9 @@
 package filesystem
 
 import (
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/storage"
-	"github.com/cooper/go-git/storage/filesystem/dotgit"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/storage"
+	"github.com/cooper/go-git/v4/storage/filesystem/dotgit"
 )
 
 type ModuleStorage struct {

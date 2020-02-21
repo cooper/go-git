@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
-	"github.com/cooper/go-git/config"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
+	"github.com/cooper/go-git/v4/config"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/storage/memory"
 )
 
 // Example of how to:

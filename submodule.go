@@ -7,9 +7,9 @@ import (
 	"fmt"
 
 	"gopkg.in/src-d/go-billy.v4"
-	"github.com/cooper/go-git/config"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/format/index"
+	"github.com/cooper/go-git/v4/config"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/format/index"
 )
 
 var (

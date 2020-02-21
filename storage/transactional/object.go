@@ -1,8 +1,8 @@
 package transactional
 
 import (
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/storer"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/storer"
 )
 
 // ObjectStorage implements the storer.EncodedObjectStorer for the transactional package.

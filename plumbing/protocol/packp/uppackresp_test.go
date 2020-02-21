@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"io/ioutil"
 
-	"github.com/cooper/go-git/plumbing/protocol/packp/capability"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/capability"
 
 	. "gopkg.in/check.v1"
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 type UploadPackResponseSuite struct{}

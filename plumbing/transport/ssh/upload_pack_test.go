@@ -12,8 +12,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/plumbing/transport/test"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/plumbing/transport/test"
 
 	"github.com/gliderlabs/ssh"
 	stdssh "golang.org/x/crypto/ssh"

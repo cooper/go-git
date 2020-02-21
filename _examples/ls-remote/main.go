@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/cooper/go-git"
-	"github.com/cooper/go-git/config"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4"
+	"github.com/cooper/go-git/v4/config"
+	"github.com/cooper/go-git/v4/storage/memory"
 )
 
 // Retrieve remote tags without cloning repository

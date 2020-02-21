@@ -2,7 +2,7 @@ package config
 
 import (
 	. "gopkg.in/check.v1"
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 type BranchSuite struct{}

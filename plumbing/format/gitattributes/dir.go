@@ -5,8 +5,8 @@ import (
 	"os/user"
 
 	"gopkg.in/src-d/go-billy.v4"
-	"github.com/cooper/go-git/plumbing/format/config"
-	gioutil "github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing/format/config"
+	gioutil "github.com/cooper/go-git/v4/utils/ioutil"
 )
 
 const (

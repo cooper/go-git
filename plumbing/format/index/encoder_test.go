@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	. "gopkg.in/check.v1"
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 func (s *IndexSuite) TestEncode(c *C) {

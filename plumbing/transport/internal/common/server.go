@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/cooper/go-git/plumbing/protocol/packp"
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/utils/ioutil"
 )
 
 // ServerCommand is used for a single server command execution.

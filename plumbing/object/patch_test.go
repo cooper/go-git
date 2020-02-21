@@ -3,9 +3,9 @@ package object
 import (
 	. "gopkg.in/check.v1"
 	fixtures "gopkg.in/src-d/go-git-fixtures.v3"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/storage/filesystem"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/storage/filesystem"
 )
 
 type PatchSuite struct {

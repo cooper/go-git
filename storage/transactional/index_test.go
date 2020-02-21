@@ -2,8 +2,8 @@ package transactional
 
 import (
 	. "gopkg.in/check.v1"
-	"github.com/cooper/go-git/plumbing/format/index"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing/format/index"
+	"github.com/cooper/go-git/v4/storage/memory"
 )
 
 var _ = Suite(&IndexSuite{})

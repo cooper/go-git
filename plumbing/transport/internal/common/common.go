@@ -15,12 +15,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cooper/go-git/plumbing/format/pktline"
-	"github.com/cooper/go-git/plumbing/protocol/packp"
-	"github.com/cooper/go-git/plumbing/protocol/packp/capability"
-	"github.com/cooper/go-git/plumbing/protocol/packp/sideband"
-	"github.com/cooper/go-git/plumbing/transport"
-	"github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing/format/pktline"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/capability"
+	"github.com/cooper/go-git/v4/plumbing/protocol/packp/sideband"
+	"github.com/cooper/go-git/v4/plumbing/transport"
+	"github.com/cooper/go-git/v4/utils/ioutil"
 )
 
 const (

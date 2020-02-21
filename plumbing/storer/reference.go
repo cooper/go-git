@@ -4,7 +4,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/cooper/go-git/plumbing"
+	"github.com/cooper/go-git/v4/plumbing"
 )
 
 const MaxResolveRecursion = 1024

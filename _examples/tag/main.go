@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/object"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/object"
 )
 
 // Basic example of how to list tags.

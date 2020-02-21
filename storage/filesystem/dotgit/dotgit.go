@@ -13,9 +13,9 @@ import (
 	"time"
 
 	"gopkg.in/src-d/go-billy.v4/osfs"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/storage"
-	"github.com/cooper/go-git/utils/ioutil"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/storage"
+	"github.com/cooper/go-git/v4/utils/ioutil"
 
 	"gopkg.in/src-d/go-billy.v4"
 )

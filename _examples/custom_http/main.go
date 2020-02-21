@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/cooper/go-git"
-	. "github.com/cooper/go-git/_examples"
-	"github.com/cooper/go-git/plumbing/transport/client"
-	githttp "github.com/cooper/go-git/plumbing/transport/http"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4"
+	. "github.com/cooper/go-git/v4/_examples"
+	"github.com/cooper/go-git/v4/plumbing/transport/client"
+	githttp "github.com/cooper/go-git/v4/plumbing/transport/http"
+	"github.com/cooper/go-git/v4/storage/memory"
 )
 
 // Here is an example to configure http client according to our own needs.

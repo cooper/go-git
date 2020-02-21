@@ -6,9 +6,9 @@ import (
 	stdioutil "io/ioutil"
 
 	"gopkg.in/src-d/go-billy.v4/memfs"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/format/idxfile"
-	"github.com/cooper/go-git/storage/memory"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/format/idxfile"
+	"github.com/cooper/go-git/v4/storage/memory"
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-git-fixtures.v3"

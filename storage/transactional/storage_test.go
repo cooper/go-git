@@ -5,13 +5,13 @@ import (
 
 	. "gopkg.in/check.v1"
 	"gopkg.in/src-d/go-billy.v4/memfs"
-	"github.com/cooper/go-git/plumbing"
-	"github.com/cooper/go-git/plumbing/cache"
-	"github.com/cooper/go-git/plumbing/storer"
-	"github.com/cooper/go-git/storage"
-	"github.com/cooper/go-git/storage/filesystem"
-	"github.com/cooper/go-git/storage/memory"
-	"github.com/cooper/go-git/storage/test"
+	"github.com/cooper/go-git/v4/plumbing"
+	"github.com/cooper/go-git/v4/plumbing/cache"
+	"github.com/cooper/go-git/v4/plumbing/storer"
+	"github.com/cooper/go-git/v4/storage"
+	"github.com/cooper/go-git/v4/storage/filesystem"
+	"github.com/cooper/go-git/v4/storage/memory"
+	"github.com/cooper/go-git/v4/storage/test"
 )
 
 func Test(t *testing.T) { TestingT(t) }
