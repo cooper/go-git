@@ -1654,6 +1654,9 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	}
 	defer f.Close()
 	_, err = fmt.Fprintf(f, "%s\n", commonDir)
+	if err != nil {
+		return nil, err
+	}
 
 	// create .git/worktree/<branch>/gitdir
 	f2, err := fs.Create(fs.Join(dotGitWorktree, "gitdir"))
@@ -1662,6 +1665,40 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	}
 	defer f2.Close()
 	_, err = fmt.Fprintf(f2, "%s\n", fsAbs)
+	if err != nil {
+		return nil, err
+	}
+
+	// create .git/worktree/<branch>/HEAD
+	f3, err := fs.Create(fs.Join(dotGitWorktree, "HEAD"))
+	if err != nil {
+		return nil, err
+	}
+	defer f3.Close()
+	_, err = fmt.Fprintf(f3, "ref: refs/heads/%s\n", branch)
+	if err != nil {
+		return nil, err
+	}
+
+	// create a storer for the .git dir in worktree dir
+	//s := filesystem.NewStorageWithOptions(dot, cache.NewObjectLRUDefault(), options)
+	s := filesystem.NewStorage(worktree, cache.NewObjectLRUDefault())
+
+	// create a new linked Repository
+	fmt.Println("worktree", worktree)
+	linkedRepo, err := Open(s, worktree)
+	if err != nil {
+		return nil, err
+	}
+
+	// checkout the branch
+	wt, err := linkedRepo.Worktree()
+	if err != nil {
+		return nil, err
+	}
+	if err = wt.Checkout(&CheckoutOptions{Branch: plumbing.NewBranchReferenceName(branch)}); err != nil {
+		return nil, err
+	}
 
 	return nil, nil
 }
