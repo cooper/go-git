@@ -1595,6 +1595,10 @@ func (r *Repository) createNewObjectPack(cfg *RepackConfig) (h plumbing.Hash, er
 
 // PlainAddWorktree checks out a branch in another directory, returning the linked Repository.
 func (r *Repository) PlainAddWorktree(branch string, path string, o *AddWorktreeOptions) (*Repository, error) {
+	// TODO: allow for an arbitrary commit-ish reference rather than just branch name?
+	// could have options Branch and Hash like Checkout. If both provided, create the branch
+	// at Hash. Maybe a Create option to make sure this is what was desired.
+
 	var fs billy.Filesystem
 	type fsBased interface {
 		Filesystem() billy.Filesystem
