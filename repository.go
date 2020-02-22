@@ -55,6 +55,7 @@ var (
 	ErrIsBareRepository          = errors.New("worktree not available in a bare repository")
 	ErrUnableToResolveCommit     = errors.New("unable to resolve commit")
 	ErrPackedObjectsNotSupported = errors.New("Packed objects not supported")
+	ErrStorageNotFilesystem      = errors.New("storer is not file based")
 )
 
 // Repository represents a git repository
@@ -1592,13 +1593,8 @@ func (r *Repository) createNewObjectPack(cfg *RepackConfig) (h plumbing.Hash, er
 	return h, err
 }
 
-// PlainAddWorktree blah
-func (r *Repository) PlainAddWorktree(branch, path string, o *AddWorktreeOptions) (*Repository, error) {
-	return r.AddWorktree(branch, osfs.New(path), o)
-}
-
-// AddWorktree blah
-func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *AddWorktreeOptions) (*Repository, error) {
+// PlainAddWorktree checks out a branch in another directory, returning the linked Repository.
+func (r *Repository) PlainAddWorktree(branch string, path string, o *AddWorktreeOptions) (*Repository, error) {
 	var fs billy.Filesystem
 	type fsBased interface {
 		Filesystem() billy.Filesystem
@@ -1608,8 +1604,10 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	if fstorer, ok := r.Storer.(fsBased); ok {
 		fs = fstorer.Filesystem()
 	} else {
-		return nil, errors.New("storer is not file based")
+		return nil, ErrStorageNotFilesystem
 	}
+
+	worktree := osfs.New(path)
 
 	// create .git/worktrees/<branch>
 	dotGitWorktree := fs.Join("worktrees", branch)
@@ -1631,18 +1629,22 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 		return nil, err
 	}
 
-	// find absolute paths for .git and .git/worktree/<branch>
+	// find absolute paths for .git, .git/worktree/<branch>, and worktree
 	fsAbs, err := filepath.Abs(fs.Root())
 	if err != nil {
 		return nil, err
 	}
-	worktreeAbs, err := filepath.Abs(filepath.Join(fs.Root(), dotGitWorktree))
+	dotGitWorktreeAbs, err := filepath.Abs(filepath.Join(fs.Root(), dotGitWorktree))
+	if err != nil {
+		return nil, err
+	}
+	worktreeAbs, err := filepath.Abs(worktree.Root())
 	if err != nil {
 		return nil, err
 	}
 
 	// find relative apath to .git from .git/worktree/<branch> (commondir)
-	commonDir, err := filepath.Rel(worktreeAbs, fsAbs)
+	commonDir, err := filepath.Rel(dotGitWorktreeAbs, fsAbs)
 	if err != nil {
 		return nil, err
 	}
@@ -1680,13 +1682,8 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 		return nil, err
 	}
 
-	// create a storer for the .git dir in worktree dir
-	//s := filesystem.NewStorageWithOptions(dot, cache.NewObjectLRUDefault(), options)
-	s := filesystem.NewStorage(worktree, cache.NewObjectLRUDefault())
-
 	// create a new linked Repository
-	fmt.Println("worktree", worktree)
-	linkedRepo, err := Open(s, worktree)
+	linkedRepo, err := PlainOpen(worktreeAbs)
 	if err != nil {
 		return nil, err
 	}
@@ -1696,7 +1693,10 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	if err != nil {
 		return nil, err
 	}
-	if err = wt.Checkout(&CheckoutOptions{Branch: plumbing.NewBranchReferenceName(branch)}); err != nil {
+	if err = wt.Checkout(&CheckoutOptions{
+		Branch: plumbing.NewBranchReferenceName(branch),
+		Force:  true, // force to ignore unstaged changes
+	}); err != nil {
 		return nil, err
 	}
 
