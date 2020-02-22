@@ -502,4 +502,10 @@ func (o *PlainOpenOptions) Validate() error { return nil }
 
 // AddWorktreeOptions describes how an AddWorktree should be performed.
 type AddWorktreeOptions struct {
+
+	// Lock is used to prevent the worktree from being purged,
+	// whether automatically or by `git worktree prune`. It
+	// is useful if the worktree filesystem is stored on
+	// a filesystem that is not always available.
+	Lock bool
 }

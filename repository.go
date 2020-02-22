@@ -1615,8 +1615,8 @@ func (r *Repository) PlainAddWorktree(branch string, path string, o *AddWorktree
 		return nil, err
 	}
 
-	// todo: if lock, create locked file
-	if false {
+	// if locked, create lock file
+	if o.Lock {
 		f, err := fs.Create(fs.Join(dotGitWorktree, "lock"))
 		if err != nil {
 			return nil, err
@@ -1643,7 +1643,7 @@ func (r *Repository) PlainAddWorktree(branch string, path string, o *AddWorktree
 		return nil, err
 	}
 
-	// find relative apath to .git from .git/worktree/<branch> (commondir)
+	// find relative path to .git from .git/worktree/<branch> (commondir)
 	commonDir, err := filepath.Rel(dotGitWorktreeAbs, fsAbs)
 	if err != nil {
 		return nil, err
