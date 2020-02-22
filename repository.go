@@ -1704,5 +1704,5 @@ func (r *Repository) PlainAddWorktree(branch string, path string, o *AddWorktree
 		return nil, err
 	}
 
-	return nil, nil
+	return linkedRepo, nil
 }
