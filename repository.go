@@ -1612,13 +1612,14 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	}
 
 	// create .git/worktrees/<branch>
-	if err := fs.MkdirAll(fs.Join("worktrees", branch), os.ModeDir|os.ModePerm); err != nil {
+	dotGitWorktree := fs.Join("worktrees", branch)
+	if err := fs.MkdirAll(dotGitWorktree, os.ModeDir|os.ModePerm); err != nil {
 		return nil, err
 	}
 
 	// todo: if lock, create locked file
 	if false {
-		f, err := fs.Create(fs.Join("worktrees", branch, "lock"))
+		f, err := fs.Create(fs.Join(dotGitWorktree, "lock"))
 		if err != nil {
 			return nil, err
 		}
@@ -1629,6 +1630,38 @@ func (r *Repository) AddWorktree(branch string, worktree billy.Filesystem, o *Ad
 	if err := createDotGitFile(worktree, fs); err != nil {
 		return nil, err
 	}
+
+	// find absolute paths for .git and .git/worktree/<branch>
+	fsAbs, err := filepath.Abs(fs.Root())
+	if err != nil {
+		return nil, err
+	}
+	worktreeAbs, err := filepath.Abs(filepath.Join(fs.Root(), dotGitWorktree))
+	if err != nil {
+		return nil, err
+	}
+
+	// find relative apath to .git from .git/worktree/<branch> (commondir)
+	commonDir, err := filepath.Rel(worktreeAbs, fsAbs)
+	if err != nil {
+		return nil, err
+	}
+
+	// create .git/worktree/<branch>/commondir
+	f, err := fs.Create(fs.Join(dotGitWorktree, "commondir"))
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+	_, err = fmt.Fprintf(f, "%s\n", commonDir)
+
+	// create .git/worktree/<branch>/gitdir
+	f2, err := fs.Create(fs.Join(dotGitWorktree, "gitdir"))
+	if err != nil {
+		return nil, err
+	}
+	defer f2.Close()
+	_, err = fmt.Fprintf(f2, "%s\n", fsAbs)
 
 	return nil, nil
 }
